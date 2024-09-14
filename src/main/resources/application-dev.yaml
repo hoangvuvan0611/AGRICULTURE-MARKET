@@ -13,6 +13,8 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     database: postgresql
     open-in-view: true
+server:
+  port: 8081
