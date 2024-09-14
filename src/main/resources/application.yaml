@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: AgriMarket
+  profiles:
+    active: dev
+
