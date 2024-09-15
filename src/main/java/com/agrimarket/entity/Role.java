@@ -1,5 +1,6 @@
 package com.agrimarket.entity;
 
+import jakarta.persistence.Entity;
 import lombok.*;
 
 @Getter
@@ -7,6 +8,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRole {
+@Entity()
+public class Role {
     private String role;
 }
