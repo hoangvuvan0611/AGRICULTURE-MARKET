@@ -2,18 +2,13 @@ package com.agrimarket.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.sql.Timestamp;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(callSuper = true)
 @Entity(name = "CUSTOMERS")
 @Table(name = "CUSTOMERS")
 public class Customer extends User{
