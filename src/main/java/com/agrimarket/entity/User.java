@@ -18,6 +18,9 @@ public class User {
     @Column(nullable = false, name = "user_name")
     private String userName;
 
+    @Column(nullable = false, name = "password")
+    private String password;
+
     @Column(name = "first_name")
     private String firstName;
 
@@ -29,9 +32,6 @@ public class User {
 
     @Column(name = "gender")
     private String gender;
-
-    @Column(nullable = false, name = "password")
-    private String password;
 
     @Column(name = "is_verified")
     private boolean isVerified;
