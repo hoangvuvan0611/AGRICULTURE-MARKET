@@ -29,7 +29,7 @@ public class LocalResolver extends AcceptHeaderLocaleResolver implements WebMvcC
                 ? Locale.lookup(
                         // Chuyen doi ngon ngu yeu cau tu header de tim kiem
                         Locale.LanguageRange.parse(languageHeader),
-                        List.of(new Locale("en"), new Locale("vi")))
+                        List.of(new Locale("vi"), new Locale("en")))
                 // Neu khong tim thay ngon ngu yeu cau thi lay ngon ngu mac dinh
                 : Locale.getDefault();
     }
