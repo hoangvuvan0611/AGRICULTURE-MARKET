@@ -8,12 +8,12 @@ public class ResponseData<T> {
     private final boolean success;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private final Integer errorCode;
-    private final String message;
+    private final T message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private final T data;
 
     // Cho cac response thanh cong
-    public ResponseData(String message, T data) {
+    public ResponseData(T message, T data) {
         this.success = true;
         this.errorCode = null;
         this.message = message;
@@ -21,7 +21,7 @@ public class ResponseData<T> {
     }
 
     // Response tra ve loi
-    public ResponseData(Integer errorCode, String message) {
+    public ResponseData(Integer errorCode, T message) {
         this.success = false;
         this.errorCode = errorCode;
         this.message = message;

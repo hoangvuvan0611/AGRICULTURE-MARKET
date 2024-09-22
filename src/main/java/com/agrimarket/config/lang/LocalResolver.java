@@ -1,4 +1,4 @@
-package com.agrimarket.config;
+package com.agrimarket.config.lang;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
