@@ -7,7 +7,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-@Entity(name = "USERS")
+@Entity
 @Table(name = "USERS")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
@@ -15,39 +15,39 @@ public class User {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false, name = "user_name")
+    @Column(nullable = false, name = "USER_NAME")
     private String userName;
 
-    @Column(nullable = false, name = "password")
+    @Column(nullable = false, name = "PASSWORD")
     private String password;
 
-    @Column(name = "first_name")
+    @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "LAST_NAME")
     private String lastName;
 
-    @Column(name = "date_of_birth")
+    @Column(name = "DATE_OF_BIRTH")
     private String dateOfBirth;
 
-    @Column(name = "gender")
+    @Column(name = "GENDER")
     private String gender;
 
-    @Column(name = "is_verified")
+    @Column(name = "IS_VERIFIED")
     private boolean isVerified;
 
-    @Column(name = "is_activated")
+    @Column(name = "IS_ACTIVATED")
     private boolean isActivated;
 
     @CreationTimestamp
-    @Column(name = "creation_date")
-    private Timestamp creationDate;
+    @Column(name = "CREATE_AT")
+    private Timestamp createAT;
 
     @UpdateTimestamp
-    @Column(name = "last_update_date")
-    private Timestamp lastUpdateDate;
+    @Column(name = "UPDATE_AT")
+    private Timestamp updateAt;
 
     @Lob
-    @Column(name = "avatar")
+    @Column(name = "AVATAR")
     private byte[] avatar;
 }

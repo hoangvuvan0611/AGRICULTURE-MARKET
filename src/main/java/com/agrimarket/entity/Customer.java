@@ -9,16 +9,16 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-@Entity(name = "CUSTOMERS")
+@Entity
 @Table(name = "CUSTOMERS")
 public class Customer extends User{
 
-    @Column(name = "email", unique = true)
+    @Column(name = "EMAIL", unique = true)
     private String email;
 
-    @Column(name = "phone_number", unique = true)
+    @Column(name = "PHONE_NUMBER", unique = true)
     private String phoneNumber;
 
-    @Column(name = "address")
+    @Column(name = "ADDRESS")
     private String address;
 }

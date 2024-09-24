@@ -17,27 +17,27 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "ROLES")
+@Entity
 @Table(name = "ROLES")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column( name = "role_name", nullable = false, unique = true)
+    @Column( name = "ROLE_NAME", nullable = false, unique = true)
     @Enumerated(EnumType.STRING)
     private RoleEnum roleName;
 
-    @Column(name = "description")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @CreationTimestamp
-    @Column(name = "creation_date")
-    private Timestamp creationDate;
+    @Column(name = "CREATE_AT")
+    private Timestamp createAt;
 
     @UpdateTimestamp
-    @Column(name = "last_update_date")
-    private Timestamp lastUpdateDate;
+    @Column(name = "UPDATE_AT")
+    private Timestamp updateAt;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "roles")
